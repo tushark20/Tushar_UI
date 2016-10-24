@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#F4F4F4"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#85bb38"
+        android:theme="?attr/actionBarTheme"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolbar">
+
+        <TextView
+            android:text="Cancel"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textCancel"
+            android:textColor="@color/colorTitle"
+            android:textSize="@dimen/activity_vertical_margin" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:text="Recipe Upload"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textTitle"
+        android:layout_marginTop="17dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorTitle"
+        android:textSize="@dimen/activity_vertical_margin" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bimg"
+            android:cropToPadding="false"
+            android:adjustViewBounds="false"
+            android:elevation="1dp" />
+    </FrameLayout>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_beginner"
+        android:layout_alignLeft="@+id/textTitle"
+        android:layout_alignStart="@+id/textTitle"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:id="@+id/button_chef"
+        android:text="Sous chef"
+        android:background="@drawable/button_shape"
+        android:textAllCaps="false"
+        android:textColor="#333333"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_master"
+        android:layout_alignBaseline="@+id/button_chef"
+        android:layout_alignBottom="@+id/button_chef"
+        android:layout_alignRight="@+id/editCrecipe"
+        android:layout_alignEnd="@+id/editCrecipe"
+        android:text="Master"
+        android:background="@drawable/button_shape"
+        android:textAllCaps="false"
+        android:textColor="#333333"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:text="Serves"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tvshape"
+        android:id="@+id/text_serves"
+        android:textColor="#333333"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/button_beginner" />
+
+    <Button
+        android:text="Next"
+        android:background="#F4F4F4"
+        android:textAllCaps="false"
+        android:textColor="#333333"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="bottom|center"
+        android:drawableRight="@drawable/ic_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/_next"
+        android:textSize="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/content"
+        android:layout_alignEnd="@+id/content"
+        android:layout_alignTop="@+id/textPageno"
+        android:layout_marginBottom="5dp" />
+
+    <TextView
+        android:text="1/3"
+        android:background="#F4F4F4"
+        android:textColor="#85bb38"
+        android:textSize="18dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textPageno"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_serves"
+        android:id="@+id/imageAdd"
+        android:layout_above="@+id/editNotes"
+        android:layout_toLeftOf="@+id/text_serves"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_alignTop="@+id/text_serves" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time"
+        android:id="@+id/imageTime"
+        android:padding="5dp"
+        android:layout_alignBottom="@+id/text_serves"
+        android:layout_alignLeft="@+id/textPageno"
+        android:layout_alignStart="@+id/textPageno"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tvshape"
+        android:id="@+id/text_cook"
+        android:padding="10dp"
+        android:text="Cooking Time"
+        android:textColor="#333333"
+        android:layout_alignBottom="@+id/imageTime"
+        android:layout_toRightOf="@+id/imageTime"
+        android:layout_toEndOf="@+id/imageTime"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editRecipe"
+        android:hint="Type the recipe name"
+        android:textColor="#333333"
+        android:background="@drawable/edit_shape"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColorHint="#D2D2D2"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editCrecipe"
+        android:hint="Choose your recipe type"
+        android:textColor="#333333"
+        android:background="@drawable/edit_shape"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColorHint="#D2D2D2"
+        android:layout_below="@+id/editRecipe"
+        android:layout_alignLeft="@+id/editRecipe"
+        android:layout_alignStart="@+id/editRecipe"
+        android:layout_alignRight="@+id/editRecipe"
+        android:layout_alignEnd="@+id/editRecipe" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:id="@+id/editNotes"
+        android:hint="Notes, tell us the story behind it."
+        android:inputType="textMultiLine"
+        android:textColor="#333333"
+        android:background="@drawable/edit_shape"
+        android:padding="10dp"
+        android:textAlignment="textStart"
+        android:gravity="center_vertical|start"
+        android:textColorHint="#D2D2D2"
+        android:layout_below="@+id/text_serves"
+        android:layout_alignLeft="@+id/button_beginner"
+        android:layout_alignStart="@+id/button_beginner"
+        android:layout_alignRight="@+id/editCrecipe"
+        android:layout_alignEnd="@+id/editCrecipe" />
+
+    <Button
+        android:text="Beginner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/button_beginner"
+        android:background="@drawable/button_shape"
+        android:textAllCaps="false"
+        android:backgroundTint="#85BB38"
+        android:textColor="@color/colorTitle"
+        android:layout_below="@+id/editCrecipe"
+        android:layout_alignLeft="@+id/editCrecipe"
+        android:layout_alignStart="@+id/editCrecipe"
+        android:layout_marginLeft="14dp"
+        android:layout_marginStart="14dp" />
+
+
+</RelativeLayout>
